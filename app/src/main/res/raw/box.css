@@ -1,0 +1,17 @@
+<style>
+.box
+{
+    float:left;
+    width:100px;
+    height:100px;
+    margin-right: 20px;
+}
+.red
+{
+    background:#f00;
+}
+.green
+{
+    background:#0f0;
+}
+</style>

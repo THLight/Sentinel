@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:weightSum="600" >
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ui_rev"
+        android:orientation="vertical"
+        android:weightSum="1080">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1920">
+
+            <TextView
+                android:id="@+id/tv_space"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="240" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="625"
+                android:orientation="vertical"
+                android:weightSum="980">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:orientation="horizontal"
+                    android:weightSum="400">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Locator"
+                        android:textColor="@android:color/background_light" />
+
+                    <View
+                        android:id="@+id/view_locator"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="100"
+                        android:background="@android:color/holo_red_light" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Beacon"
+                        android:textColor="@android:color/background_light" />
+
+                    <View
+                        android:id="@+id/view_beacon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="100"
+                        android:background="@android:color/holo_red_light" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tV_networkStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:text="network status"
+                    android:textColor="@android:color/background_light" />
+
+                <TextView
+                    android:id="@+id/tv_usbStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="40"
+                    android:textColor="@android:color/background_light" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="740"
+                    android:background="#ebebeb"
+                    android:orientation="vertical"
+                    android:weightSum="680">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="95"
+                        android:orientation="horizontal"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="Beacon Server :"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_beacon_server"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="640"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:inputType=""
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="90"
+                        android:orientation="horizontal"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="NTP Server :"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_ntp_server"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="640"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:inputType=""
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="95"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="IP Setting"
+                            android:textColor="#000000"
+                            android:textIsSelectable="false" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_ip_setting"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="660"
+                            android:background="@null"
+                            android:orientation="horizontal"
+                            android:weightSum="660">
+
+                            <RadioButton
+                                android:id="@+id/rd_dhcp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:button="@drawable/custom_radio_button_background"
+                                android:checked="false"
+                                android:text="DHCP"
+                                android:textColor="#000000" />
+
+                            <RadioButton
+                                android:id="@+id/rd_static"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:button="@drawable/custom_radio_button_background"
+                                android:checked="false"
+                                android:text="Static"
+                                android:textColor="#000000" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="80"
+                        android:orientation="horizontal"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="IP :"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_ip"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="640"
+                            android:background="@null"
+                            android:digits="0123456789."
+                            android:gravity="center_vertical"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="90"
+                        android:orientation="horizontal"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="Subnet Mask :"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_subnet_mask"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="640"
+                            android:background="@null"
+                            android:digits="0123456789."
+                            android:gravity="center_vertical"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="90"
+                        android:orientation="horizontal"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="GateWay :"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_gateway"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="640"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:inputType=""
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="70"
+                        android:orientation="horizontal"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="DNS :"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_dns"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="640"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:inputType=""
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="70"
+                        android:orientation="horizontal"
+                        android:weightSum="1080">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="400"
+                            android:gravity="center"
+                            android:text="Project Name :"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_project"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="640"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:inputType=""
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1000"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="110" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    android:orientation="horizontal"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <TextView
+                        android:id="@+id/tv_bt_mac"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:gravity="bottom|left"
+                        android:textColor="#000000"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="80"
+                    android:orientation="horizontal"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <TextView
+                        android:id="@+id/tv_internet_mac"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:gravity="left|center"
+                        android:textColor="#000000"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <EditText
+                        android:id="@+id/et_upload_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:background="@null"
+                        android:ems="10"
+                        android:gravity="center|left"
+                        android:hint="milliseconds/time"
+                        android:inputType="number"></EditText>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <EditText
+                        android:id="@+id/et_scan_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="260"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="Scan Time(milliseconds)"
+                        android:inputType="number"
+                        android:maxLength="4">
+
+                    </EditText>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15" />
+
+                    <EditText
+                        android:id="@+id/et_stop_scan_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="260"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="Stop (milliseconds)"
+                        android:inputType="number"
+                        android:maxLength="4" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_server_type"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rd_beaconServer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:checked="false"
+                            android:text="Beacon"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:id="@+id/rd_locatorServer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:checked="false"
+                            android:text="Locator"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:id="@+id/rd_bothServers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:checked="false"
+                            android:text="Both"
+                            android:textColor="#000000" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <EditText
+                        android:id="@+id/et_url"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="510"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="Location Server URL"
+                        android:inputType="textUri"
+                        android:lines="1"
+                        android:textColor="#000000"
+                        android:textSize="12sp">
+
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_algorithm"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rd_none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:checked="false"
+                            android:text="None"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:id="@+id/rd_avg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:text="AVG"
+                            android:textColor="#000000" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="65"
+                    android:orientation="horizontal"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <EditText
+                        android:id="@+id/et_filter_uuid"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="510"
+                        android:background="@null"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="Filter(UUID)"
+                        android:lines="1"
+                        android:textSize="12sp"
+                        android:inputType="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_security_mode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="600"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rd_wpa2Psk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:text="WPA2 PSK"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:id="@+id/rd_wpa2Ent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:text="WPA2 Enterprise"
+                            android:textColor="#000000" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <EditText
+                        android:id="@+id/et_ssid"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="260"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="SSID"
+                        android:textColor="#000000"
+                        android:inputType="" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15" />
+
+                    <EditText
+                        android:id="@+id/et_key"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="250"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="key"
+                        android:textColor="#000000"
+                        android:inputType="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:weightSum="1080">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/et_identity"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="260"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="identity"
+                        android:textColor="#000000"
+                        android:inputType="" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15" />
+
+                    <EditText
+                        android:id="@+id/et_pass"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="260"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="password"
+                        android:textColor="#000000"
+                        android:inputType="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_connect_mode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rd_wifi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:checked="false"
+                            android:text="WIFI"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:id="@+id/rd_ethernet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/custom_radio_button_background"
+                            android:text="Ethernet"
+                            android:textColor="#000000" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="80"
+                    android:weightSum="1080">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="310" />
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="245"
+                        android:background="@drawable/btnsave_hit"
+                        android:textSize="20sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15" />
+
+                    <Button
+                        android:id="@+id/btn_start_receiver"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="240"
+                        android:background="@drawable/btnrestart_hit"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="80"
+                    android:gravity="left|center"
+                    android:text="Ver"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
